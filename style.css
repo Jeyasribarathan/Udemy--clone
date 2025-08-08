@@ -50,6 +50,9 @@ body {
     align-items: center;
     gap: 10px;
 }
+.navbar__4{
+    display: none;
+}
 
 .categories {
     display: flex;
@@ -64,10 +67,11 @@ body {
     padding: 10px;
     border-radius: 30px;
     border: solid #A435F0 1px;
-    
+
 
 }
-.categories p:hover{
+
+.categories p:hover {
     transition: 1s;
     background-color: transparent;
     color: black;
@@ -92,7 +96,9 @@ body {
 }
 
 .course-card {
-    width: 300px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .course-card img {
@@ -205,3 +211,28 @@ body {
 .mylearning:hover .mylearning__popup {
     display: block;
 }
+
+@media screen and (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .course-card {
+        flex-basis: 40%;
+    }
+
+    .categories {
+        display: none;
+    }
+
+    .navbar__2,.navbar__3 {
+        display: none;}
+        .navbar__4{
+            display: block;
+        }
+
+    }
+
